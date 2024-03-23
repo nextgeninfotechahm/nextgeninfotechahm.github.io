@@ -1,0 +1,27 @@
+<h1>Our courses</h1>
+
+<div class="ui three cards sliding">
+    <div class="ui card" *ngFor="let c of courses">
+
+        <div class="ui slide image">
+            <img src="assets/{{c.id}}.jpeg">
+        </div>
+        <div class="content">
+            <div class="header">{{c.name}}</div>
+            <div class="description">{{c.description}}</div>
+        </div>
+        <div class="ui extra content">
+            <div class="ui large description">Course Content</div>
+            <div class="description" *ngFor="let ct of c.content">
+                <span style="color:red">{{ct}}</span>
+            </div>
+        </div>
+        <div class="ui extra content">
+            <div class="meta">Starts on {{c.start}}</div>
+            <div class="meta">Duration: {{c.schedule}} Weeks</div>
+        </div>
+
+
+    </div>
+    
+</div>
